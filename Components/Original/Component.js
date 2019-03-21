@@ -1,3 +1,9 @@
+/*
+Copyright 2019@Jiri Korenek
+
+Basic LLeact component
+*/
+
 class Component
 {
 
@@ -6,8 +12,8 @@ class Component
         //paramaters creation
         this.name = "Component";
 
-        if(id == null) this.id = this.hashCode(now() + id);
-        else this.id = this.hashCode(this.now + "_");
+        if(id != undefined) this.id = this.hashCode(Date.now()+"a")+ id;
+        else this.id = this.hashCode(Date.now()+"a");
     }
 
     //main render function
@@ -15,9 +21,7 @@ class Component
     {
         //default
         document.write(
-            {
-                "<p ></p>"
-            }
+                "<p id="+this.id+">LLeact."+this.name+"</p>"
         );
         console.log("plz");
     }
