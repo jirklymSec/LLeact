@@ -15,7 +15,6 @@ class Component {
     }
 
     add(self){
-        console.log(self);
         self.name++;
         self.render();
     }
