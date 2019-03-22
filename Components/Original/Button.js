@@ -2,14 +2,17 @@ class Button extends Component {
     constructor(name,text) {
         super(name);
         this.text = text;
-
-        this.name = "textfield"
+        this.name = "rand";
+        this.element = "input";
+        this.type = "submit";
     }
 
-    render = function() {
-        let button = document.createElement("button");
-        button.addEventListener('click',function(){text.add(text)});
-        button.id = this.id;
-        document.getElementById("_").appendChild(button);
+    create(self) {
+        let p = document.createElement(self.element);
+        p.id = self.id;
+        p.type = self.type;
+        p.value = self.name;
+        p.innerText = "LLeact." + self.name;
+        document.getElementById("_").appendChild(p);
     }
 }

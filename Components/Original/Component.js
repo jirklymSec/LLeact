@@ -8,29 +8,23 @@ class Component {
 
     constructor(id) {
         //paramaters creation
-        this.name = 0;
+        this.name = "Component";
+        this.element = "p";
+        this.type = undefined;
         if (id != undefined) this.id = this.hashCode(Date.now() + "a") + id;
         else this.id = this.hashCode(Date.now() + "a");
-        this.create();
     }
-
-    add(self){
-        self.name++;
-        self.render();
-    }
-
-
 
     //main render function
-    render = function () {
-        let p = document.getElementById(this.id);
-        console.log(this);
-        p.innerText = this.name;
+    render(self) {
+        //for redrawing
     }
 
-    create() {
-        let p = document.createElement("p");
-        p.id = this.id;
+    create(self) {
+        let p = document.createElement(self.element);
+        p.id = self.id;
+        p.type = self.type;
+        p.innerText = "LLeact." + self.name;
         document.getElementById("_").appendChild(p);
     }
 
