@@ -1,12 +1,16 @@
 <div id="_"></div>
 <!--<script type="text/javascript" src="./Loader.js"></script>-->
-<script type="text/javascript" src="Components/Original/Component.js"></script>
+<script type="text/javascript" src="Components/Component.js"></script>
 <script type="text/javascript" src="Components/Original/Button.js"></script>
+<script type="text/javascript" src="Components/my/MyParagraph.js"></script>
+<script type="text/javascript" src="Components/my/MyGreatButton.js"></script>
 <script type="text/javascript">
 
-text = new Component();
-button = new Button();
+p = new MyParagraph();
+b = new MyGreatButton(p,p.add,"+");
+m = new MyGreatButton(p,p.minus,"-");
 
-text.create(text);
-button.create(button);
+p.create(p);
+b.create(b);
+m.create(m);
 </script>
