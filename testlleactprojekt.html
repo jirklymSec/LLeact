@@ -1,16 +1,13 @@
-<div id="_"></div>
-<!--<script type="text/javascript" src="./Loader.js"></script>-->
+<div id="_root"></div>
+<!--load compenents her-->
 <script type="text/javascript" src="Components/Component.js"></script>
+<script type="text/javascript" src="Components/Original/TextField.js"></script>
 <script type="text/javascript" src="Components/Original/Button.js"></script>
-<script type="text/javascript" src="Components/my/MyParagraph.js"></script>
-<script type="text/javascript" src="Components/my/MyGreatButton.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="module.js"></script>
+<script type="text/javascript" src="Components/my/add.js"></script>
+<script type="text/javascript" src="Components/my/page.js"></script>
+<script>
+page = new Page();
+page.create(page);
 
-p = new MyParagraph();
-b = new MyGreatButton(p,p.add,"+");
-m = new MyGreatButton(p,p.minus,"-");
-
-p.create(p);
-b.create(b);
-m.create(m);
 </script>

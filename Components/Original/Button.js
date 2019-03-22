@@ -15,4 +15,13 @@ class Button extends Component {
         p.innerText = "LLeact." + self.name;
         document.getElementById("_").appendChild(p);
     }
+
+    create(self, parent) {
+        let p = document.createElement(self.element);
+        p.id = self.id;
+        p.type = self.type;
+        p.value = self.name;
+        p.innerText = "LLeact." + self.name;
+        parent.appendChild(p);
+    }
 }

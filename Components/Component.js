@@ -9,7 +9,7 @@ class Component {
     constructor(id) {
         //paramaters creation
         this.name = "Component";
-        this.element = "p";
+        this.elName = "p";
         this.type = undefined;
         if (id != undefined) this.id = this.hashCode(Date.now() + "a") + id;
         else this.id = this.hashCode(Date.now() + "a");
@@ -25,7 +25,16 @@ class Component {
         p.id = self.id;
         p.type = self.type;
         p.innerText = "LLeact." + self.name;
-        document.getElementById("_").appendChild(p);
+        self.element = p;
+        document.getElementById("_root").appendChild(p);
+    }
+
+    create(self,element) {
+        let p = document.createElement(self.element);
+        p.id = self.id;
+        p.type = self.type;
+        p.innerText = "LLeact." + self.name;
+        element.appendChild(p);
     }
 
     //thanks @deekshith from gitHub for this hash func!
